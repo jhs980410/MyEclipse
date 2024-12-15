@@ -1,0 +1,23 @@
+# Eclipse 설정 및 빌드 파일 제외
+.metadata/
+.project
+.classpath
+.settings/
+bin/
+target/
+.cache/
+.gradle/
+build/
+
+# 시스템 및 임시 파일 제외
+*.log
+*.tmp
+*.cache
+.bash_history
+.DS_Store
+Thumbs.db
+
+# IDE 툴링 관련 제외
+.codingame/
+.tooling/
+.codetogether/
