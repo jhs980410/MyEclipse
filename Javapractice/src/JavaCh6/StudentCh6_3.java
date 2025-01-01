@@ -34,4 +34,5 @@ public class StudentCh6_3 {
 	String info() {
 		return name +","+ ban+"," + no+"," + kor+"," + eng+"," + math+"," + getTotal() +"," + getAverage();
 	}
+	
 }
