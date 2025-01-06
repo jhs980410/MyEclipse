@@ -12,5 +12,7 @@ public class SmartPhone extends Product {
 		super.name = name;
 		super.explain = explain;
 	}
+	
+	
 
 }

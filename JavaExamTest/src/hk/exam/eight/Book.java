@@ -6,7 +6,7 @@ public class Book extends Product {
 		super(6700.00);
 		// TODO Auto-generated constructor stub
 	}
-
+	
 	public Book(String name, String explain) {
 		this();
 		super.name = name;
@@ -14,5 +14,7 @@ public class Book extends Product {
 		// TODO Auto-generated constructor stub
 	}
 
-
+	
+	
+	
 }
