@@ -11,7 +11,6 @@
     </display>  
   </class>  
   <class id="2" language="java" name="hk.exam.nine.Human" project="JavaExamTestAnswer" 
-    file="/JavaExamTestAnswer/src/hk/exam/nine/Human.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1000" y="171"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
