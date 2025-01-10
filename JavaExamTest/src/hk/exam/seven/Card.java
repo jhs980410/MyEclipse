@@ -10,7 +10,15 @@ public class Card {
 	// 실제 이용할 카드 변수
 	private String card = "";
 	
-	public void setCard() {
+	 public String getNumber() {
+        return card.substring(1); //
+    }
+
+	public static void setNumber(String[] number) {
+		Card.number = number;
+	}
+
+	public void setCard(String card) {
 		this.card = card;
 	}
 
@@ -21,6 +29,10 @@ public class Card {
 	public Card(int shapeIndex, int numberIndex){
 		init(shapeIndex, numberIndex);
 	}
+	public Card(String shape, String number) {
+	    this.card = shape + number;
+	}
+	
 	
 	// 임의의 카드 생성
 	public void init(){

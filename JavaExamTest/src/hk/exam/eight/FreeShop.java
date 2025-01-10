@@ -44,16 +44,16 @@ public class FreeShop {
 
 	public void buy(Customer customer, Product product) {
 		if (product instanceof Book && this.book == null) {
-			System.out.println(product.name+"은 팔렸습니다.");
+			System.out.println(product.name+"은 다 팔렸습니다.");
 			return;
 		} else if (product instanceof Computer && this.computer == null) {
-			System.out.println(product.name+"은 팔렸습니다.");
+			System.out.println(product.name+"은 다 팔렸습니다.");
 			return;
 		} else if (product instanceof SmartPhone && this.smartPhone == null) {
-			System.out.println(product.name+"은 팔렸습니다.");
+			System.out.println(product.name+"은 다 팔렸습니다.");
 			return;
 		} else if (product instanceof Tv && this.tv == null) {
-			System.out.println(product.name+"은 팔렸습니다.");
+			System.out.println(product.name+"은 다 팔렸습니다.");
 			return;
 		}
 		if (customer.getMoney() > product.price) {
@@ -95,11 +95,6 @@ public class FreeShop {
 				System.out.println(product.name + "을 구매하셨습니다.");
 				this.tv = null;
 			}
-		}
-
-		if (product == null) {
-			System.out.println(product.name + "은 다팔렸습니다");
-			return;
 		} else if (customer.getMoney() < product.price) {
 			System.out.println(product.name + "을 구매하기에");
 			System.out.println((product.price - customer.getMoney()) + "가 부족합니다");

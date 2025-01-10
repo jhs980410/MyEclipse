@@ -1,6 +1,8 @@
 package hk.exam.seven;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.Random;
 
@@ -11,7 +13,7 @@ public class Player {
 	private int score = 0; // 2개의 카드를 더한 점수
 	private boolean winner = false; // 승자가 누구인지 기록 (true 승자, false 패자)
 	private Card[] myChoiceCards = new Card[2]; // 내가 선택한 2장의 카드
-	ArrayList<String> cardDeck = new ArrayList<String>();
+	private CardCase cardCase;
 
 	// 생성자 (멤버변수 초기화)
 	public Player(String name, int age) {
@@ -19,7 +21,17 @@ public class Player {
 		this.name = name;
 		this.age = age;
 		this.myChoiceCards = new Card[2];
+		this.cardCase = new CardCase();
+		this.cardCase.init();
 
+	}
+
+	public CardCase getCardCase() {
+		return cardCase;
+	}
+
+	public void setCardCase(CardCase cardCase) {
+		this.cardCase = cardCase;
 	}
 
 	public String getName() {
@@ -62,27 +74,14 @@ public class Player {
 		this.winner = winner;
 	}
 
-	public void mycardDeck() {
-
-		for (int i = 0; i < Card.shape.length; i++) {
-
-			for (int j = 0; j < Card.number.length; j++) {
-
-				cardDeck.add(Card.shape[i] + Card.number[j]);
-			}
-
-		}
-
-	}
 
 	// 게임에 이용할 카드를 뽑는다
 	public Card[] drawCard() {
 		Random random = new Random();
-
 		for (int i = 0; i < 2; i++) {
-
-			myChoiceCards[i] = new Card();
-
+			int choice = random.nextInt(cardCase.getCardList().size());
+			myChoiceCards[i] = cardCase.getCardList().remove(choice);
+			
 		}
 		return myChoiceCards;
 
@@ -95,8 +94,9 @@ public class Player {
 
 	// 카드 섞기
 	public void shuffle() {
-
-		// 카드덱에 들어있는 52장의 카드들을 잘 섞어준다.
+		
+		  Collections.shuffle(cardCase.getCardList());
+		
 
 	}
 

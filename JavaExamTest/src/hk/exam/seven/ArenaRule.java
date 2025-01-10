@@ -6,18 +6,37 @@ public class ArenaRule {
 
 	// 2장의 카드 합산 결과를 돌려준다
 	public static int getCardToJumsu(Card[] cardArr) {
-		// 카드 변수
-		String card = "";
-		// 카드 점수 합산 변수
-		int scoreSum = 0;
-		
-		// 카드 2장의 합산 결과 반환
-		// A카드는 1, T카드는 10, J카드는 11, Q카드는 12, K카드는 13점이며
-		// 나머지 카드는 숫자의 의미대로 점수를 부여한다. ex) 2카드는 2점
-		
+	    int scoreSum = 0; // 점수 합산 변수
 
-		return scoreSum;
+	    for (Card card : cardArr) { // 카드 배열 순회
+	        String number = card.getNumber(); // 각 카드의 숫자 값 가져오기
+	        								//for (타입 변수 : 배열/컬렉션)
+	        // 숫자에 따라 점수를 계산
+	        switch (number) {
+	            case "A":
+	                scoreSum += 1;
+	                break;
+	            case "T":
+	                scoreSum += 10;
+	                break;
+	            case "J":
+	                scoreSum += 11;
+	                break;
+	            case "Q":
+	                scoreSum += 12;
+	                break;
+	            case "K":
+	                scoreSum += 13;
+	                break;
+	            default:
+	                scoreSum += Integer.parseInt(number); // 숫자 카드 처리
+	                break;
+	        }
+	    }
+
+	    return scoreSum;
 	}
+
 	
 	// 2사람의 카드 결과를 평가한다.
 	/**

@@ -1,7 +1,9 @@
 package hk.exam;
 
+
 import hk.exam.seven.ArenaRule;
 import hk.exam.seven.Card;
+import hk.exam.seven.CardCase;
 import hk.exam.seven.Player;
 
 public class ExamMainSeven {
@@ -20,6 +22,7 @@ public class ExamMainSeven {
 		// 경기 시작 전 카드를 잘 섞는다.
 		my.shuffle();
 		you.shuffle();
+
 		
 		// 게임 라운드 총 3번
 		for (int i = 1; i <= 3; i++) {
@@ -41,8 +44,11 @@ public class ExamMainSeven {
 			
 			// 점수 대결 후 결과표시
 			ArenaRule.gamePlayResultInfo(my, you);
+		
+			System.out.println(); // 줄띄기
+	
+
 			
-			System.out.println();
 		}
 		
 	}

@@ -9,8 +9,8 @@ public class Game {
 //	private ArrayList<Player> playerList;
 	private int score;
 	private int count;
-	int playerMember;
-	ArrayList<Player> players;
+	private int playerMember;
+	private ArrayList<Player> players;
 	Player player;
 	Scanner sc = new Scanner(System.in);
 
